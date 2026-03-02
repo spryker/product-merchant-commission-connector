@@ -27,11 +27,6 @@ class ProductMerchantCommissionConnectorDependencyProvider extends AbstractBundl
      */
     public const FACADE_PRODUCT = 'FACADE_PRODUCT';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -41,11 +36,6 @@ class ProductMerchantCommissionConnectorDependencyProvider extends AbstractBundl
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addRuleEngineFacade(Container $container): Container
     {
         $container->set(static::FACADE_RULE_ENGINE, function (Container $container) {
@@ -57,11 +47,6 @@ class ProductMerchantCommissionConnectorDependencyProvider extends AbstractBundl
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addProductFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT, function (Container $container) {

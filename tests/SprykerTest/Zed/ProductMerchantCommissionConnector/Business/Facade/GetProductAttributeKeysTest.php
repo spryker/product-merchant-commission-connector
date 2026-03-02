@@ -28,9 +28,6 @@ class GetProductAttributeKeysTest extends Unit
      */
     protected ProductMerchantCommissionConnectorBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testShouldReturnAnArrayWithAllProductAttributeKeys(): void
     {
         // Arrange

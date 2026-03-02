@@ -23,9 +23,6 @@ use Spryker\Zed\ProductMerchantCommissionConnector\ProductMerchantCommissionConn
  */
 class ProductMerchantCommissionConnectorBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ProductMerchantCommissionConnector\Business\CollectorRule\ProductAttributeCollectorRuleInterface
-     */
     public function createProductAttributeCollectorRule(): ProductAttributeCollectorRuleInterface
     {
         return new ProductAttributeCollectorRule(
@@ -35,33 +32,21 @@ class ProductMerchantCommissionConnectorBusinessFactory extends AbstractBusiness
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductMerchantCommissionConnector\Business\Reader\ProductAttributeReaderInterface
-     */
     public function createProductAttributeReader(): ProductAttributeReaderInterface
     {
         return new ProductAttributeReader($this->getProductFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\ProductMerchantCommissionConnector\Business\Reader\ProductReaderInterface
-     */
     public function createProductReader(): ProductReaderInterface
     {
         return new ProductReader($this->getProductFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\ProductMerchantCommissionConnector\Dependency\Facade\ProductMerchantCommissionConnectorToRuleEngineFacadeInterface
-     */
     public function getRuleEngineFacade(): ProductMerchantCommissionConnectorToRuleEngineFacadeInterface
     {
         return $this->getProvidedDependency(ProductMerchantCommissionConnectorDependencyProvider::FACADE_RULE_ENGINE);
     }
 
-    /**
-     * @return \Spryker\Zed\ProductMerchantCommissionConnector\Dependency\Facade\ProductMerchantCommissionConnectorToProductFacadeInterface
-     */
     public function getProductFacade(): ProductMerchantCommissionConnectorToProductFacadeInterface
     {
         return $this->getProvidedDependency(ProductMerchantCommissionConnectorDependencyProvider::FACADE_PRODUCT);

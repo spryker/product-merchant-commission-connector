@@ -25,9 +25,6 @@ class ProductAttributeReader implements ProductAttributeReaderInterface
      */
     protected static array $combinedConcreteAttributesIndexedBySku = [];
 
-    /**
-     * @param \Spryker\Zed\ProductMerchantCommissionConnector\Dependency\Facade\ProductMerchantCommissionConnectorToProductFacadeInterface $productFacade
-     */
     public function __construct(
         ProductMerchantCommissionConnectorToProductFacadeInterface $productFacade
     ) {

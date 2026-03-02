@@ -29,11 +29,6 @@ class ProductMerchantCommissionConnectorToProductFacadeBridge implements Product
         $this->productFacade = $productFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteCollectionTransfer
-     */
     public function getProductConcreteCollection(
         ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
     ): ProductConcreteCollectionTransfer {
@@ -53,11 +48,6 @@ class ProductMerchantCommissionConnectorToProductFacadeBridge implements Product
         return $this->productFacade->getCombinedConcreteAttributes($productConcreteTransfer, $localeTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductAttributeKeyCriteriaTransfer $productAttributeKeyCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductAttributeKeyCollectionTransfer
-     */
     public function getProductAttributeKeyCollection(
         ProductAttributeKeyCriteriaTransfer $productAttributeKeyCriteriaTransfer
     ): ProductAttributeKeyCollectionTransfer {

@@ -31,11 +31,6 @@ class ProductAttributeCollectorRule implements ProductAttributeCollectorRuleInte
      */
     protected ProductMerchantCommissionConnectorToRuleEngineFacadeInterface $ruleEngineFacade;
 
-    /**
-     * @param \Spryker\Zed\ProductMerchantCommissionConnector\Business\Reader\ProductReaderInterface $productReader
-     * @param \Spryker\Zed\ProductMerchantCommissionConnector\Business\Reader\ProductAttributeReaderInterface $productAttributeReader
-     * @param \Spryker\Zed\ProductMerchantCommissionConnector\Dependency\Facade\ProductMerchantCommissionConnectorToRuleEngineFacadeInterface $ruleEngineFacade
-     */
     public function __construct(
         ProductReaderInterface $productReader,
         ProductAttributeReaderInterface $productAttributeReader,

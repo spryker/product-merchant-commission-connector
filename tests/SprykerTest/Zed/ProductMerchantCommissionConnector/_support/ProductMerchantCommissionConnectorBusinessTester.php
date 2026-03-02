@@ -32,9 +32,6 @@ class ProductMerchantCommissionConnectorBusinessTester extends Actor
 {
     use _generated\ProductMerchantCommissionConnectorBusinessTesterActions;
 
-    /**
-     * @return void
-     */
     public function ensureProductAttributeKeyTableIsEmpty(): void
     {
         $this->ensureDatabaseTableIsEmpty($this->getProductAttributeKeyQuery());
@@ -61,9 +58,6 @@ class ProductMerchantCommissionConnectorBusinessTester extends Actor
         return $productConcreteTransfer;
     }
 
-    /**
-     * @return \Orm\Zed\Product\Persistence\SpyProductAttributeKeyQuery
-     */
     protected function getProductAttributeKeyQuery(): SpyProductAttributeKeyQuery
     {
         return SpyProductAttributeKeyQuery::create();

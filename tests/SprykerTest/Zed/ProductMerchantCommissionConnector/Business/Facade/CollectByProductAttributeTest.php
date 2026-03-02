@@ -54,9 +54,6 @@ class CollectByProductAttributeTest extends Unit
      */
     protected ProductMerchantCommissionConnectorBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function setUp(): void
     {
         parent::setUp();
@@ -70,9 +67,6 @@ class CollectByProductAttributeTest extends Unit
         ]);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnAllItemsSatisfyingProvidedClause(): void
     {
         // Arrange
@@ -120,9 +114,6 @@ class CollectByProductAttributeTest extends Unit
         $this->assertTrue($this->isItemCollected($collectedItems, $productConcrete2Transfer->getSkuOrFail()));
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnAllItemsWithSameSkuSatisfyingProvidedClause(): void
     {
         // Arrange
@@ -156,9 +147,6 @@ class CollectByProductAttributeTest extends Unit
         $this->assertTrue($this->isItemCollected($collectedItems, $productConcreteTransfer->getSkuOrFail()));
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnEmptyCollectionWhenNoItemSatisfiedProvidedClause(): void
     {
         // Arrange

@@ -16,11 +16,6 @@ use Generated\Shared\Transfer\ProductConcreteTransfer;
 
 interface ProductMerchantCommissionConnectorToProductFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteCollectionTransfer
-     */
     public function getProductConcreteCollection(
         ProductConcreteCriteriaTransfer $productConcreteCriteriaTransfer
     ): ProductConcreteCollectionTransfer;
@@ -36,11 +31,6 @@ interface ProductMerchantCommissionConnectorToProductFacadeInterface
         ?LocaleTransfer $localeTransfer = null
     ): array;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductAttributeKeyCriteriaTransfer $productAttributeKeyCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductAttributeKeyCollectionTransfer
-     */
     public function getProductAttributeKeyCollection(
         ProductAttributeKeyCriteriaTransfer $productAttributeKeyCriteriaTransfer
     ): ProductAttributeKeyCollectionTransfer;
